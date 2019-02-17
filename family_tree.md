@@ -38,12 +38,8 @@ Usamos la función attach para tener las variables del data frame en el
 ambiente global y poder acceder a ellas:
 
 ``` r
-attach(my_family)
+#attach(my_family)
 ```
-
-    ## The following objects are masked _by_ .GlobalEnv:
-    ## 
-    ##     affected, ages, father, gen, id, mother, sex, status
 
 Luego creamos un objeto de tipo pedigree:
 
@@ -57,7 +53,7 @@ my_ped <- pedigree(
         status = my_family$status
 )
 
-ages_genes <- paste(ages, gen, sep = "\n")
+ages_genes <- paste(my_family$ages, my_family$gen, sep = "\n")
 ```
 
 Por último, realizamos el árbol con la función plot.pedigree():
