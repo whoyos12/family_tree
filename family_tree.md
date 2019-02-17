@@ -34,13 +34,6 @@ my_family <- data.frame(id, father,
                          sex, ages, status, gen)
 ```
 
-Usamos la función attach para tener las variables del data frame en el
-ambiente global y poder acceder a ellas:
-
-``` r
-#attach(my_family)
-```
-
 Luego creamos un objeto de tipo pedigree:
 
 ``` r
